@@ -4,6 +4,11 @@ const dotenv = require("dotenv").config();
 
 const app = express();
 
+app.use(cors({
+    origin: 'http://localhost:5173', // Allow specific origin
+    methods: ['GET', 'POST'], // Allow necessary methods
+}));
+
 const port = process.env.PORT || 2000;
 
 app.use(express.json());
