@@ -93,3 +93,8 @@ function processBase64(base64String) {
       };
     }
   }
+
+exports.getRequests = (req,res)=>{
+
+res.status(200).json({"operation_code":1})
+  }
