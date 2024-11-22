@@ -3,6 +3,16 @@ const errorHandler = require("./middleware/errorHandler");
 const dotenv = require("dotenv").config();
 
 const app = express();
+const cors = require('cors');
+
+// Allow specific origin
+app.use(cors({
+  origin: 'https://bfhl-gold.vercel.app', // Your frontend URL
+  methods: ['GET', 'POST'], // Allowed methods
+}));
+
+// Or allow all origins (not recommended in production)
+app.use(cors());
 
 
 
